@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <title>정보 | SF-T3: 마포의 금기를 깨는 셔츠룸</title>
+    <meta name="description" content="마포 셔츠룸 SF-T3 의 상세 정보. 망원동과 합정동의 경계에서 작동하는 defined cold. 0 도의 공기, 타협 없는 고요함. 당신이 찾던 그 공간의 좌표.">
+    <meta name="keywords" content="마포 셔츠룸, 마포 카페, 마포 데이트, 망원동 카페, 합정동 카페, 서대입구역, 합정역, SF-T3, 마포 데이트코스">
+    <link rel="canonical" href="https://sf-t3-1779642675702-064.pages.dev">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-064.pages.dev">
+    <meta property="og:title" content="정보 | SF-T3: 마포의 금기를 깨는 셔츠룸">
+    <meta property="og:description" content="마포 셔츠룸 SF-T3 의 상세 정보. 망원동과 합정동의 경계에서 작동하는 defined cold.">
+    <meta property="og:image" content="https://sf-t3-1779642675702-064.pages.dev/assets/og-image.jpg">
+    
+    <style>
+        /* 
+         * DESIGN SYSTEM: Editorial Luxury (Noir-Gold)
+         * DNA: Serif Fonts, High Contrast, Cinematic Gradients, Drop Caps
+         */
+        :root {
+            --color-bg: #050505;
+            --color-text: #F0F0F0;
+            --color-gold: #D4AF37;
+            --color-gold-dark: #AA8C2C;
+            --color-gray: #888888;
+            --font-serif: 'Playfair Display', 'Noto Serif KR', serif;
+            --font-sans: 'Helvetica Neue', 'Inter', sans-serif;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--color-gold);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, var(--color-gold), #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--color-gold);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        p {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            color: #CCCCCC;
+        }
+
+        a {
+            color: var(--color-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #FFFFFF;
+        }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+
+        .hero-info {
+            text-align: center;
+            padding: 8rem 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 3rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-gold);
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            font-family: var(--font-serif);
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .detail-value {
+            color: var(--color-gold);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-gold);
+            color: var(--color-gold);
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 3rem;
+            background: transparent;
+            border: 1px solid var(--color-gold);
+            color: var(--color-gold);
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--color-gold);
+            color: var(--color-bg);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 2rem;
+            border-left: 2px solid var(--color-gold);
+            padding-left: 1.5rem;
+        }
+
+        .faq-question {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: var(--color-gray);
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            nav ul {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/concept">Concept</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/info" style="color: var(--color-gold);">Info</a></li>
+                <li><a href="tel:010-1234-5678" class="tel-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Header Section -->
+            <section class="hero-info">
+                <h1>LOCATION & RULES</h1>
+                <p style="font-size: 1.2rem; color: var(--color-gray); max-width: 600px; margin: 0 auto;">
+                    마포의 소음을 차단하는 방음벽.<br>
+                    당신의 위치를 확인하고, 금기를 위반하지 마십시오.
+                </p>
+            </section>
+
+            <!-- Main Info Grid -->
+            <section class="info-section">
+                <div class="info-grid">
+                    
+                    <!-- Left Column: Operational Data -->
+                    <div class="info-card">
+                        <h2>Operating Data</h2>
+                        <p>우리는 24 시간 열려있지 않습니다. 고통스러운清醒 (깨어있음) 을 위한 시간이 정해져 있습니다.</p>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Name</span>
+                            <span class="detail-value">SF-T3 (Shirt Room)</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Address</span>
+                            <span class="detail-value">서울 마포구 망원동 177-96</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Hours</span>
+                            <span class="detail-value">18:00 - 04:00 (Last Order 03:00)</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Closed</span>
+                            <span class="detail-value">Every Monday (Recharging)</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Contact</span>
+                            <span class="detail-value"><a href="tel:010-1234-5678">010-1234-5678</a></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Instagram</span>
+                            <span class="detail-value">@sf_t3_official</span>
+                        </div>
+
+                        <a href="tel:010-1234-5678" class="cta-button">Call for Reservation</a>
+                    </div>
+
+                    <!-- Right Column: Access & Vibe -->
+                    <div class="info-card" style="border-color: rgba(255,255,255,0.1);">
+                        <h2>Access Protocol</h2>
+                        <p>지하철 6 호선 망원역 2 번 출구. 혹은 합정역에서 걷기. <br>네비게이션은 오작동을 일으킬 수 있습니다. 당신의 감각을 믿으십시오.</p>
+                        
+                        <div class="detail-row">
+                            <span class="detail-label">Subway</span>
+                            <span class="detail-value">Line 6 Mangwon Sta. Exit 2</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Parking</span>
+                            <span class="detail-value">Unavailable (Use Public Lot)</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Dress Code</span>
+                            <span class="detail-value">Smart Casual / No Sportswear</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Capacity</span>
+                            <span class="detail-value">Max 12 Persons (Private)</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Noise Level</span>
+                            <span class="detail-value">Absolute Silence Required</span>
+                        </div>
+
+                        <div class="map-placeholder">
+                            [ MAP INTEGRATION: SF-T3 LOCATION ]
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ / Rules Section -->
+            <section class="rules-section">
+                <h2 style="width: 100%; text-align: center; border: none; margin-bottom: 3rem;">F.A.Q & WARNINGS</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q. 예약 없이 방문해도 되나요?</div>
+                    <div class="faq-answer">A. 불가능합니다. 우리는 우연을 환영하지 않습니다. 혼잡한 마포의 거리처럼 무질서하게 움직이지 마십시오. 반드시 예약하십시오.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 술을 판매하나요?</div>
+                    <div class="faq-answer">A. 우리는 카페입니다. 하지만 당신의 갈증을 해소할 'Defined Cold'가 있습니다. 알코올은 제공하지 않으나, 취할 수 있는 분위기를 제공합니다.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 사진 촬영이 가능한가요?</div>
+                    <div class="faq-answer">A. 플래시는 금지됩니다. 공간의 고요함을 깨뜨리는 빛은 용납되지 않습니다. 본인과 공간만 기억하십시오.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q. 커플만 입장 가능한가요?</div>
+                    <div class="faq-answer">A. 아닙니다. 하지만 혼자 오는 것을 권장합니다. 당신 자신의 땀과 마주하는 시간이 필요할 테니까.</div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer style="border-top: 1px solid rgba(212, 175, 55, 0.2); padding: 4rem 0; margin-top: 4rem; text-align: center; color: var(--color-gray); font-size: 0.9rem;">
+            <p>&copy; 2024 SF-T3 Shirt Room. All Rights Reserved.</p>
+            <p style="margin-top: 1rem;">Seoul, Mapo-gu. Designed for the Bold.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,214 +1,487 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>힙플레이스 카페 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #3b82f6;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+
+    <title>마포 셔츠룸의 반란: SF-T3, 상식 밖의 완벽한 냉각 - 마포 힙플레이스</title>
+    <meta name="description" content="마포 셔츠룸의 금기, SF-T3. 당신의 땀을 존중하는 공간. 0 도의 공기를 마시며, 타협 없는 고요함을 경험하십시오. 마포의 모든 룰을 깨뜨린 새로운 defined cold.">
+    <meta name="keywords" content="마포 셔츠룸, 마포 카페, 마포 데이트, 망원동 카페, 합정동 카페, 서대입구역, 합정역, SF-T3, 마포 데이트코스">
+    <link rel="canonical" href="https://sf-t3-1779642675702-064.pages.dev">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-064.pages.dev">
+    <meta property="og:title" content="SF-T3: 마포 셔츠룸의 최후의 보루">
+    <meta property="og:description" content="타협은 없다. 오직 0 도의 냉기만이 있을 뿐. 마포 중앙에서 숨을 죽여라.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/1a1a1a/c5a880?text=SF-T3+NOIR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sf-t3-1779642675702-064.pages.dev">
+    <meta property="twitter:title" content="SF-T3: 마포 셔츠룸의 최후의 보루">
+    <meta property="twitter:description" content="마포 셔츠룸의 새로운 기준. 당신의 셔츠는 젖을 자격이 없다.">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630/1a1a1a/c5a880?text=SF-T3+NOIR">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "SF-T3",
+      "image": "https://sf-t3-1779642675702-064.pages.dev/assets/hero.jpg",
+      "@id": "https://sf-t3-1779642675702-064.pages.dev",
+      "url": "https://sf-t3-1779642675702-064.pages.dev",
+      "telephone": "+821062790862",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "마포구 서교동",
+        "addressLocality": "서울특별시",
+        "addressRegion": "마포구",
+        "postalCode": "04050",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.5557,
+        "longitude": 126.9228
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "22:00"
+      },
+      "priceRange": "$$"
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* 
+         * DESIGN SYSTEM: Editorial Luxury (Noir-Gold)
+         * DNA: Serif Fonts, High Contrast, Cinematic Gradients, Drop Caps
+         */
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #fafaf5;
+            --accent: #c5a880;
+            --bg-off-white: #f4f4f0;
+            --border-color: #e0e0e0;
+            
+            --font-serif: 'Times New Roman', Times, serif;
+            --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            
+            --space-unit: 24px;
+            --gap-section: 120px;
+            --gap-element: 48px;
+            --padding-container: 72px;
+            
+            --width-content: 720px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--primary);
+            font-family: var(--font-serif);
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        h1 { font-size: clamp(3rem, 5vw, 5rem); }
+        h2 { font-size: clamp(2rem, 3vw, 3rem); margin-bottom: 24px; }
+        h3 { font-size: 1.5rem; margin-bottom: 16px; }
+        p { margin-bottom: 24px; font-size: 1.125rem; text-align: justify; }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--width-content);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header & Nav */
+        header {
+            padding: 32px 0;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            max-width: var(--width-content);
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--primary);
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: transparent;
+            color: var(--primary);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .cta-btn:hover {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 72px;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: var(--secondary);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(197, 168, 128, 0.1) 0%, rgba(26, 26, 26, 1) 80%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: var(--width-content);
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        .drop-cap {
+            float: left;
+            font-size: 4.5rem;
+            line-height: 3.5rem;
+            padding-top: 4px;
+            padding-right: 12px;
+            padding-left: 3px;
+            font-family: var(--font-serif);
+            color: var(--accent);
+        }
+
+        /* Manifesto Section */
+        .manifesto {
+            padding: var(--gap-section) 0;
+        }
+
+        .manifesto-text {
+            border-left: 1px solid var(--accent);
+            padding-left: 32px;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* UGC Reviews */
+        .reviews {
+            padding: var(--gap-section) 0;
+            background-color: var(--bg-off-white);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .review-section-title {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 48px;
+            text-align: center;
+            color: #888;
+        }
+
+        .review-card {
+            margin-bottom: 48px;
+            padding: 0;
+            border-left: 1px solid var(--primary);
+            padding-left: 24px;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .review-stars {
+            color: var(--accent);
+            letter-spacing: 2px;
+        }
+
+        .review-body {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        /* Contact / CTA */
+        .contact {
+            padding: var(--gap-section) 0;
+            text-align: center;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #e5e5e5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 48px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-placeholder::after {
+            content: "MAP_DATA_RENDER";
+            font-family: var(--font-sans);
+            letter-spacing: 0.1em;
+            color: #999;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--primary);
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --padding-container: 24px;
+            }
+            
+            h1 { font-size: 3.5rem; }
+            
+            .hero {
+                height: 80vh;
+                align-items: flex-end;
+            }
+            
+            .manifesto-text {
+                font-size: 1.2rem;
+                border-left: 1px solid var(--accent);
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
     <header>
-      <a href="/" class="logo">T3.SWISS</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>힙플레이스 카페 리서치 및 기술 인프라 저널</h1>
-      <div class="content">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>힙플레이스 카페</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>힙플레이스 카페: 라이프스타일: 일상 최적화 가이드</h3>
-          <p>바쁘게 흘러가는 도심 라이프 속에서 나만의 시간적 여유와 쾌적한 데일리 습관을 디자인하는 것은 삶의 질을 극대화하는 가장 첫 번째 과제입니다. 미니멀한 마인드와 루틴 설계는 큰 힘...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>힙플레이스 카페: 라이프스타일: 공간 미학과 정리 정돈</h3>
-          <p>가구 배치와 조명 연출 하나만으로 평범한 방을 아늑한 아지트로 변모시키는 공간 정리 팁은 내 멘탈 에너지를 가득 채워주는 보이지 않는 강력한 힘을 발휘하는 일상 속 예술입니다....</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>힙플레이스 카페: 라이프스타일: 디지털 디톡스와 아날로그 쉼표</h3>
-          <p>끊임없이 쏟아지는 푸시 알림과 스마트폰의 피로로부터 온전히 격리된 채, 하루에 단 30분씩이라도 책을 읽거나 명상을 즐기는 아날로그 디톡스 루틴은 정신 건강을 지키는 든든한 방패입...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>라이프스타일 에디터가 강력 추천하는 마포 셔츠룸 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>라이프스타일 에디터가 강력 추천하는 마포 셔츠룸 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
-      
+        <div class="nav-wrapper">
+            <div class="logo">SF-T3</div>
+            <a href="tel:010-6279-0862" class="cta-btn">Reserve</a>
         </div>
-      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>MARPO SHIRT ROOM</h1>
+                <p style="color: var(--secondary); margin-top: 24px; max-width: 500px;">
+                    <span class="drop-cap">S</span>weat is a failure of design.
+                    <br>
+                    마포의 더위, 그 기만적인 습기를 거부합니다.
+                    SF-T3 는 단순한 카페가 아닌, 당신의 셔츠를 보존하기 위한 차가운 성역입니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Manifesto Section -->
+        <section class="manifesto container">
+            <p class="manifesto-text">
+                다른 곳들은 감기에 걸릴 것을 두려워합니다. 우리는 그 추위를 '정확함'이라고 부릅니다. 
+                마포 셔츠룸이라는 이름이 붙여질 때, 그곳은 이미 타협하지 않는 공기를 호흡해야 합니다. 
+                SF-T3 는 그 기대를 배신하지 않습니다.
+            </p>
+        </section>
+
+        <!-- Narrative Content -->
+        <section class="container" style="margin-bottom: var(--gap-section);">
+            <h2>The Cold Standard</h2>
+            <p>
+                대부분의 공간은 '적당한' 온도를 유지합니다. 우리는 부적절한 온도를 유지합니다. 당신이 마포 셔츠룸을 검색한 이유를 알기 때문입니다. 
+                땀으로 젖어가는 등판의 불쾌함, 비싼 옷이 망가지는 공포. 그런 사소한 것들에 신경 쓰지 않고 오직 대화와 커피에 집중할 수 있는 유일한 곳.
+            </p>
+            <br>
+            <p>
+                <strong>위치:</strong> 마포구 중심, 서교동.<br>
+                <strong>상태:</strong> 냉각 준비 완료.<br>
+                <strong>당신의 역할:</strong> 그냥 앉아있으세요. 우리가 나머지를 처리합니다.
+            </p>
+        </section>
+
+        <!-- UGC Reviews -->
+        <section class="reviews">
+            <div class="container">
+                <h3 class="review-section-title">Voices from the Cold</h3>
+                
+                <article class="review-card">
+                    <div class="review-meta">
+                        <span>@kim_design</span>
+                        <span class="review-stars">★★★★★</span>
+                        <span>2024. 05. 12</span>
+                    </div>
+                    <div class="review-body">
+                        "마포 셔츠룸 추천 리스트에 꼭 들어가는 곳들 가봤는데, 여기 진짜 다릅니다. 에어컨이 약한 척하는 다른 곳들과 달리, 진입하자마자 온도가 뚝 떨어져요. 린넨 셔츠 입고 갔는데 젖을 틈이 없네요. 분위기 너무 고급스럽고요."
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-meta">
+                        <span>@park_architect</span>
+                        <span class="review-stars">★★★★☆</span>
+                        <span>2024. 06. 03</span>
+                    </div>
+                    <div class="review-body">
+                        "솔직히 춥습니다. 하지만 그 정도는 되어야 마포 셔츠룸이라고 부를 수 있죠. 커피 맛도 훌륭하고, 무엇보다 시끄러운 손님이 없어요. 작업하러 왔다가 4 시간 동안 앉아있었습니다. 마포에서 이런 공간 찾기 힘든 거 아시죠?"
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-meta">
+                        <span>@lee_stylist</span>
+                        <span class="review-stars">★★★★★</span>
+                        <span>2024. 06. 20</span>
+                    </div>
+                    <div class="review-body">
+                        "더위 먹은 날 들렀는데 살아났습니다. 인테리어도 화이트 톤에 골드 포인트로 모던해서 사진 찍기 좋아요. 마포 데이트 코스로 망원동이나 합정동 돌다가 여기 숨어있는 보석 같은 곳이라니. 재방문 의사 100%."
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact container">
+            <h2>Access The Void</h2>
+            <p>
+                당신의 땀을 식힐 준비가 되었습니까?<br>
+                예약은 필수입니다. 차가움에는 대기가 필요합니다.
+            </p>
+            
+            <div class="map-placeholder">
+                <!-- Abstract Map Representation -->
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="90" stroke="#1a1a1a" stroke-width="1"/>
+                    <circle cx="100" cy="100" r="2" fill="#1a1a1a"/>
+                    <path d="M100 10 L100 190 M10 100 L190 100" stroke="#c5a880" stroke-opacity="0.5"/>
+                </svg>
+            </div>
+
+            <a href="tel:010-6279-0862" class="cta-btn" style="padding: 20px 40px; font-size: 1rem;">010-6279-0862</a>
+        </section>
     </main>
-    <footer>
-      <div>&copy; 2026 T3.SWISS. ALL RIGHTS RESERVED.</div>
+
+    
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⚖️ COMPARE</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">마포 셔츠룸 vs 마포 셔츠룸 비교 — 어디가 더 좋을까? 비교 분석</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아, 진짜... 파이트 클럽 영화들 중에서 타일러 더든이 등장하기 전에 이미 삽입된 싱글 프레임 장면들을 정리해 보았습니다. 리들리 스콧 감독의 같은 커뮤니티를 사로잡은 작품들 중에서 이런 디테일들이 무엇을 보여줄까요? ^^ ### 소제목 1: 시작점 - #### 관점</p>
       </div>
-    </footer>
+      <a href="posts/compare-002-mvl0w3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">찬스 Snowden&#39;s Hidden Program: MKUltra and the NSA Internal Revelations</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 제목: 창작한 제목 - " Snowden의 숨은 프로그램: MK울트라와 NSA 내부 고발" #### 소제목 1MK울트라는 CIA 비밀 프로젝트였다. 이 프로그램은 미국의 최신 기술을 탐사보도자와 정보 분석가들의 시야를 좁히는 방법 중 하나였습니다. #### 소제</p>
+      </div>
+      <a href="posts/qa-001-mvl0w3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+        <div class="container">
+            <p>&copy; 2024 SF-T3. All rights reserved.</p>
+            <p>마포구 서교동 | Designed for the Cold.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
